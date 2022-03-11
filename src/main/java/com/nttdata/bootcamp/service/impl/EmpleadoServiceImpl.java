@@ -42,4 +42,11 @@ public class EmpleadoServiceImpl implements EmpleadoService{
 	public List<Empleado> listarFriltroNombreEs(String nombre) {
 		return repoJPA.listarCuyoNombreEs(nombre);
 	}
+
+	@Override
+	public Empleado insertar(Empleado emp) {
+		return repoJPA.save(emp);
+	}
+
+	
 }
