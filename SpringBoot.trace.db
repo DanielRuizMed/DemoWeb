@@ -1,0 +1,12 @@
+2022-03-11 10:40:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "EMEPLEADOS" no encontrada
+Table "EMEPLEADOS" not found; SQL statement:
+select * from emepleados where nombre=? [42102-200]
+2022-03-11 10:41:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "EMPLEADOS" no encontrada
+Table "EMPLEADOS" not found; SQL statement:
+select * from empleados where nombre=? [42102-200]
+2022-03-11 10:41:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "EMPLEADOS" no encontrada
+Table "EMPLEADOS" not found; SQL statement:
+select * from empleados where nombre=? [42102-200]
