@@ -1,14 +1,20 @@
 package com.nttdata.bootcamp.repository.entity;
 
+import java.util.Arrays;
+import java.util.Collection;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
 @Entity
 @Table
-public class Usuario {
+public class Usuario implements UserDetails {
 
 	@Id
 	@Column
@@ -53,6 +59,31 @@ public class Usuario {
 
 	public void setRol(Rol rol) {
 		this.rol = rol;
+	}
+
+	@Override
+	public Collection<? extends GrantedAuthority> getAuthorities() {	
+		return Arrays.asList(this.rol);
+	}
+
+	@Override
+	public boolean isAccountNonExpired() {
+		return true;
+	}
+
+	@Override
+	public boolean isAccountNonLocked() {
+		return true;
+	}
+
+	@Override
+	public boolean isCredentialsNonExpired() {
+		return true;
+	}
+
+	@Override
+	public boolean isEnabled() {
+		return true;
 	}
 	
 }
