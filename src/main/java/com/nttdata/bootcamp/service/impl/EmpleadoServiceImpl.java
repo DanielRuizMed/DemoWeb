@@ -48,5 +48,20 @@ public class EmpleadoServiceImpl implements EmpleadoService{
 		return repoJPA.save(emp);
 	}
 
+	@Override
+	public Empleado modificar(Empleado emp) {
+		return repoJPA.save(emp);
+	}
+
+	@Override
+	public void eliminar(Integer id) {
+		repoJPA.deleteById(id);
+	}
+
+	@Override
+	public Empleado getById(Integer id) {
+		return repoJPA.findById(id).orElse(null);
+	}
+
 	
 }

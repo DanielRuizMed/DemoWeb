@@ -12,4 +12,7 @@ public interface EmpleadoService {
 	public List<Empleado> listarConJPA(Integer pID, String contiene);
 	public List<Empleado> listarFriltroNombreEs(String nombre);
 	Empleado insertar(Empleado emp);
+	public Empleado modificar(Empleado emp);
+	public void eliminar(Integer id);
+	public Empleado getById(Integer id);
 }
